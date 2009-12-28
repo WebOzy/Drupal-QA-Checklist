@@ -1,0 +1,5 @@
+; $Id$
+name = QA Checklist
+description = A Quality Assurance checklist for Drupal.
+core = 6.x
+recommends[] = vertical_tabs
