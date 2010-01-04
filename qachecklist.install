@@ -173,14 +173,17 @@ function qachecklist_install() {
   db_query("INSERT INTO {qa_group} VALUES (8, 'Getting Ready', 'A few things to do before deployment.')");
   db_query("INSERT INTO {qa_checklist} $task_fields VALUES (26, 8, 'Disable devel modules.', '', '', '', '', 1)");
   db_query("INSERT INTO {qa_checklist} $task_fields VALUES (27, 8, 'Set a maintenance theme - add \$conf[\'maintenance_theme\'] = \'mytheme\'; to settings.php.', '', '', '', '', 2)");
-  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (28, 8, 'Disable theme registry rebuild.', '', '', '', '', 3)");
-  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (29, 8, 'Turn off PHP error display.', '', '', '', '', 4)");
-  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (30, 8, 'Change all necessary Drupal/MySQL/SSH passwords.', '', '', '', '', 5)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (28, 8, 'Clean CSS files with CSS tidy. (recommended for future development)', '', '', '', '', 3)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (29, 8, 'Disable theme registry rebuild.', '', '', '', '', 4)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (30, 8, 'Turn off PHP error display.', '', '', '', '', 5)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (31, 8, 'Change all necessary Drupal/MySQL/SSH passwords.', '', '', '', '', 6)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (32, 8, 'Remove temporary users and content.', '', '', '', '', 7)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (33, 8, 'Setup site emails.', '', '', '', '', 8)");
   
   // Deployment
   db_query("INSERT INTO {qa_group} VALUES (9, 'Deployment', 'Tasks to be done when launching the site.')");
-  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (31, 9, 'Setup HTTP redirect in settings.php.', '', '', '', '', 1)");
-  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (32, 9, 'Setup cron job.', '', '', '', '', 2)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (34, 9, 'Setup HTTP redirect in settings.php.', '', '', '', '', 1)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (35, 9, 'Setup cron job.', '', '', '', '', 2)");
 }
 
 /**
