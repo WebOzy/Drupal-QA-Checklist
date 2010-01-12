@@ -158,7 +158,7 @@ function qachecklist_install() {
   db_query("INSERT INTO {qa_group} VALUES (6, 'User Permissions', 'Review user permissions.')");
   db_query("INSERT INTO {qa_checklist} $task_fields VALUES (17, 6, 'Filter Permissions', 'filter_perms', 'http://drupal.org/project/filter_perms', 'admin/build/modules', '', 1)");
   db_query("INSERT INTO {qa_checklist} $task_fields VALUES (18, 6, 'Better Permissions', 'better_perms', 'http://drupal.org/project/better_perms', 'admin/build/modules', '', 2)");
-  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (19, 6, 'Admin Role module', 'adminrole', 'http://drupal.org/project/adminrole, 'admin/build/modules', '', 3)");
+  db_query("INSERT INTO {qa_checklist} $task_fields VALUES (19, 6, 'Admin Role module', 'adminrole', 'http://drupal.org/project/adminrole', 'admin/build/modules', '', 3)");
   db_query("INSERT INTO {qa_checklist} $task_fields VALUES (20, 6, 'Read: Managing Drupal Permissions', '', 'http://drupal.org/node/22275', '', '', 4)");
   db_query("INSERT INTO {qa_checklist} $task_fields VALUES (21, 6, 'Review and revise user permissions.', '', '', '', '', 5)");
   
