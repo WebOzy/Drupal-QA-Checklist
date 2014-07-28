@@ -1,6 +1,6 @@
 name = QA Checklist
-description = Provides a quality assurance checklist.
+description = A Quality Assurance checklist for launching Drupal sites.
 core = 7.x
-package = Other
+package = QA
 dependencies[] = checklistapi
 configure = admin/config/development/qa-checklist
