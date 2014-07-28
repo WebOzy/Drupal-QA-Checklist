@@ -16,6 +16,20 @@ function qa_checklist_checklistapi_checklist_info() {
     '#path' => 'admin/config/development/qa-checklist',
     '#help' => t(''),
 
+    'deploy' => array(
+      '#title' => t('Deployment'),
+      '#description' => t('<p>Install and complete other Drupal checklists.</p>'),
+      'deploy_code' => array(
+        '#title' => t('Deploy code to live server'),
+        '#default_value' => module_exists('security_review'),
+        'project_page' => array(
+          '#text' => t('Download'),
+          '#path' => 'http://drupal.org/project/security_review',
+        ),
+        'modules_page' => $modules_page = array('#text' => t('Enable'), '#path' => 'admin/modules'),
+      ),
+    ),
+
     'other_checklists' => array(
       '#title' => t('Other checklists'),
       '#description' => t('<p>Install and complete other Drupal checklists.</p>'),
@@ -39,8 +53,8 @@ function qa_checklist_checklistapi_checklist_info() {
       ),
     ),
 
-    'other_modules' => array(
-      '#title' => t('Other modules'),
+    'backups' => array(
+      '#title' => t('Backups'),
       '#description' => t('<p>Other important Drupal modules.</p>'),
       'install_backup_migrate_module' => array(
         '#title' => t('Backup and Migrate'),
@@ -60,6 +74,11 @@ function qa_checklist_checklistapi_checklist_info() {
         ),
         'modules_page' => $modules_page,
       ),
+    ),
+
+    'maintenance' => array(
+      '#title' => t('Maintenance'),
+      '#description' => t('<p>Other important Drupal modules.</p>'),
       'install_db_maintenance_module' => array(
         '#title' => t('DB Maintenance'),
         '#default_value' => module_exists('db_maintenance'),
@@ -115,8 +134,8 @@ function qa_checklist_checklistapi_checklist_info() {
       ),
     ),
 
-    'user_settings' => array(
-      '#title' => t('User settings'),
+    'user_management' => array(
+      '#title' => t('User management'),
       '#description' => t('<p>Review user settings.</p>'),
       'set_admin_role' => array(
         '#title' => t('Set administrator role.'),
@@ -139,11 +158,6 @@ function qa_checklist_checklistapi_checklist_info() {
           '#path' => 'admin/config/people/accounts',
         ),
       ),
-    ),
-
-    'user_permissions' => array(
-      '#title' => t('User permissions'),
-      '#description' => t('<p>Review user permissions.</p>'),
       'install_filter_perms_module' => array(
         '#title' => t('OPTIONAL: Install Filter Permissions module'),
         '#default_value' => module_exists('filter_perms'),
@@ -165,10 +179,9 @@ function qa_checklist_checklistapi_checklist_info() {
       ),
     ),
 
-    'in_case_you_forgot' => array(
-      '#title' => t('In case you forgot'),
+    'logging' => array(
+      '#title' => t('Logs'),
       '#description' => t('<p>A few tasks to remember:</p>'),
-      'review_user_perms_again' => $review_user_perms,
       'check_drupal_logs' => array(
         '#title' => t('Check Drupal logs for issues.'),
         '#description' => t('Make sure Database logging (dblog) module is enabled.'),
@@ -187,8 +200,8 @@ function qa_checklist_checklistapi_checklist_info() {
       ),
     ),
 
-    'getting_ready' => array(
-      '#title' => t('Getting ready'),
+    'cleanup' => array(
+      '#title' => t('Cleanup'),
       '#description' => t('<p>A few things to do before deployment:</p>'),
       'disable_devel_modules' => array(
         '#title' => t('Disable devel modules.'),
@@ -225,9 +238,12 @@ function qa_checklist_checklistapi_checklist_info() {
       ),
     ),
 
-    'deployment' => array(
-      '#title' => t('Deployment'),
+    'launch' => array(
+      '#title' => t('Site launch'),
       '#description' => t('<p>Tasks to be done when launching the site.</p>'),
+      'set_up_settings_php_redirect' => array(
+        '#title' => t('Change DNS records'),
+      ),
       'set_up_settings_php_redirect' => array(
         '#title' => t('Set up HTTP redirect in settings.php'),
       ),
