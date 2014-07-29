@@ -6,6 +6,31 @@
  */
 
 /**
+ * Checks whether the WebOzy footer link is enabled.
+ *
+ * @return bool
+ *   Returns TRUE if the footer link is enabled or FALSE if not.
+ */
+function _qa_checklist_webozy_link_is_enabled() {
+  $link_is_enabled = &drupal_static(__FUNCTION__);
+  if (!isset($link_is_enabled)) {
+    $saved_progress = variable_get('checklistapi_checklist_qa_checklist', array());
+    $link_is_enabled = !empty($saved_progress['link_to_webozy']);
+  }
+  return $link_is_enabled;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function qa_checklist_form_checklistapi_checklist_form_alter(&$form, &$form_state, $form_id) {
+  if ($form['#checklist']->id == 'qa_checklist') {
+    $form['checklistapi']['#attached']['js'][] = drupal_get_path('module', 'qa_checklist') . '/qa_checklist.js';
+    $form['checklistapi']['#attached']['css'][] = drupal_get_path('module', 'qa_checklist') . '/qa_checklist.css';
+  }
+}
+
+/**
  * Implements hook_checklistapi_checklist_info().
  */
 function qa_checklist_checklistapi_checklist_info() {
@@ -254,4 +279,39 @@ function qa_checklist_checklistapi_checklist_info() {
 
   );
   return $checklists;
+}
+
+/**
+ * Implements hook_init().
+ */
+function qa_checklist_init() {
+  if (_qa_checklist_webozy_link_is_enabled()) {
+    drupal_add_css(drupal_get_path('module', 'qa_checklist') . '/qa_checklist.css');
+  }
+}
+
+/**
+ * Implements hook_page_alter().
+ */
+function qa_checklist_page_alter(&$page) {
+  if (_qa_checklist_webozy_link_is_enabled()) {
+    $page['page_bottom']['qa_checklist_webozy_link'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div id="seo-checklist-webozy-link"><a href="http://www.webozy.com/contact?utm_source=qa_checklist&amp;utm_medium=footer&amp;utm_campaign=webozy_seo">Drupal SEO</a></div>',
+    );
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function qa_checklist_theme($existing, $type, $theme, $path) {
+  return array(
+    'qa_checklist_intro_tab' => array(
+      'template' => 'qa_checklist_intro_tab',
+      'variables' => array(
+        'webozy_logo' => t('WebOzy'),
+      ),
+    ),
+  );
 }
