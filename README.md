@@ -1,5 +1,6 @@
-## Introduction
+# Textual overview of checklist
 
+## Introduction
 
 ### How to use the Drupal QA Checklist
 
@@ -20,9 +21,9 @@ Not every task in this list needs to, or even should, be done. Some of this will
 
 ### Credits
 
-The Drupal QA Checklist was created by [Nicholas Garofalo (Eidolon Night)](https://www.drupal.org/user/191336), the CTO of WebOzy, Inc. and other staff members. Special thanks to [Travis Carden](https://www.drupal.org/user/236758) who created the [Checklist API](https://www.drupal.org/project/checklistapi) and ported the 7.x-1.x branch.*
+The Drupal QA Checklist was created by [Nicholas Garofalo (Eidolon Night)](https://www.drupal.org/user/191336), the CTO of WebOzy, Inc. and other staff members. Special thanks to [Travis Carden](https://www.drupal.org/user/236758) who created the [Checklist API](https://www.drupal.org/project/checklistapi) and ported the 7.x-1.x branch.
 
->#### Notes
+> #### Notes
 >
 > - Be sure to click the **save** button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.
 > - Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.
