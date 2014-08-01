@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Drupal QA Checklist by WebOzy</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Drupal QA Checklist</h1>
+        <h2>GitHub repo for https://www.drupal.org/project/qa_checklist</h2>
+        <a href="https://github.com/WebOzy/Drupal-QA-Checklist" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="textual-overview-of-checklist" class="anchor" href="#textual-overview-of-checklist"><span class="octicon octicon-link"></span></a>Textual overview of checklist</h1>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<h3>
+<a name="how-to-use-the-drupal-qa-checklist" class="anchor" href="#how-to-use-the-drupal-qa-checklist"><span class="octicon octicon-link"></span></a>How to use the Drupal QA Checklist</h3>
+
+<p>The following will help in your use of the QA Checklist.
+Information</p>
+
+<p>This module was written for Drupal site builders, developers, and System administrators or anyone else in charge of launching a Drupal site. The tasks within represent a comprehensive list of things to review and tasks to perform before going live. If you need help with Drupal SEO best practices, the search engines' latest changes, your brand's target audience, or strategic marketing objectives, consider using a Drupal development shop consultant like <a href="http://webozy.com/">WebOzy</a> or others listed in the <a href="https://www.drupal.org/drupal-services">Marketplace</a>.</p>
+
+<h3>
+<a name="a-bit-about-checklists" class="anchor" href="#a-bit-about-checklists"><span class="octicon octicon-link"></span></a>A bit about checklists</h3>
+
+<p>Each time you open the QAChecklist, it will look to see if any tasks have already been completed. For example, if you've already turned on clean URLs then that item will be checked. You still need to click "Save" to time and date stamp the automatically-checked items.</p>
+
+<p>The tasks here are designed to be done sequentially, from top to bottom.</p>
+
+<h3>
+<a name="dont-do-it-all" class="anchor" href="#dont-do-it-all"><span class="octicon octicon-link"></span></a>Don’t do it all</h3>
+
+<p>Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as Pantheon means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain points.</p>
+
+<h3>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h3>
+
+<p>The Drupal QA Checklist was created by <a href="https://www.drupal.org/user/191336">Nicholas Garofalo (Eidolon Night)</a>, the CTO of WebOzy, Inc. and other staff members. Special thanks to <a href="https://www.drupal.org/user/236758">Travis Carden</a> who created the <a href="https://www.drupal.org/project/checklistapi">Checklist API</a> and ported the 7.x-1.x branch.</p>
+
+<blockquote>
+<h4>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h4>
+
+<ul>
+<li>Be sure to click the <strong>save</strong> button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.</li>
+<li>Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.</li>
+<li>“Review” means to check over, the usual settings may be fine
+
+<ul>
+<li>
+<strong>define</strong>:<em>review</em> - to examine or assess (something) formally with the possibility or intention of instituting change if necessary. </li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+<h2>
+<a name="deployment" class="anchor" href="#deployment"><span class="octicon octicon-link"></span></a>Deployment</h2>
+
+<ul>
+<li>Deploy code to live server
+
+<ul>
+<li>This checklist is meant to be performed on your live environment</li>
+</ul>
+</li>
+</ul><h2>
+<a name="other-checklists-optional" class="anchor" href="#other-checklists-optional"><span class="octicon octicon-link"></span></a>Other checklists (optional)</h2>
+
+<p>These are other checklists that would be good to complete.</p>
+
+<ul>
+<li>Security Review
+
+<ul>
+<li>Check the site for common Drupal security risks.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>SEO Checklist
+
+<ul>
+<li>Add some modules to help with SEO best practices.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Site Audit
+
+<ul>
+<li>Drupal static site analysis platform that generates reports with actionable best practice recommendations.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Performance and scalability checklist
+
+<ul>
+<li>Drupal static site analysis platform that generates reports with actionable best practice recommendations.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+</ul><h2>
+<a name="backups" class="anchor" href="#backups"><span class="octicon octicon-link"></span></a>Backups</h2>
+
+<p>A good backup strategy prevents you from having a really bad day.</p>
+
+<ul>
+<li>Install Backup and Migrate
+
+<ul>
+<li>This will help with your database backups if your host/PAAS doesn't do it for you.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Install Backup and Migrate Files
+
+<ul>
+<li>This addon helps backs up for files if your host/PAAS doesn't do it for you.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Configure Backup and Migrate settings
+
+<ul>
+<li>DESCRIPTION</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Configure server-side backups
+
+<ul>
+<li>Using your hosts server-side backups ensures that you also save server configuration</li>
+</ul>
+</li>
+</ul><h2>
+<a name="maintenance" class="anchor" href="#maintenance"><span class="octicon octicon-link"></span></a>Maintenance</h2>
+
+<p>You want to make sure that your site keeps performing well, these steps help you do just that.</p>
+
+<ul>
+<li>Install DB Maintenance
+
+<ul>
+<li>Keep your database clean and running smoothly. Note: You db server needs to be running a few days to get useful results.</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Run DB Maintenance
+
+<ul>
+<li>CONFIGURE LINK</li>
+</ul>
+</li>
+</ul><h2>
+<a name="linux" class="anchor" href="#linux"><span class="octicon octicon-link"></span></a>Linux</h2>
+
+<p>Some changes to how your OS behaves can help with resource usage and ensure that you get the most out of your server.</p>
+
+<ul>
+<li>Review OS swappiness value
+
+<ul>
+<li>Check swappiness value to avoid swapping to the hard disks. Be careful and make sure that you have enough memory.</li>
+<li>MORE INFO</li>
+</ul>
+</li>
+</ul><h2>
+<a name="web-server" class="anchor" href="#web-server"><span class="octicon octicon-link"></span></a>Web server</h2>
+
+<p>No matter which web server technology you use, the default settings simply won't do.</p>
+
+<ul>
+<li>Review web server configuration
+
+<ul>
+<li>Review Apache/Nginx configuration: max clients, timeouts, etc.</li>
+</ul>
+</li>
+<li>Review configured vhosts 
+
+<ul>
+<li>Check for the proper vhosts for your site and any overrides that may be in those files.</li>
+</ul>
+</li>
+</ul><blockquote>
+<h4>
+<a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional resources</h4>
+
+<p>Apache performance tuning <a href="http://httpd.apache.org/docs/current/misc/perf-tuning.html">http://httpd.apache.org/docs/current/misc/perf-tuning.html</a></p>
+</blockquote>
+
+<h2>
+<a name="database" class="anchor" href="#database"><span class="octicon octicon-link"></span></a>Database</h2>
+
+<p>The database is Drupal's backend, so let's treat her well.</p>
+
+<ul>
+<li>Review database configuration
+
+<ul>
+<li>Check cache sizes, default table type, etc.</li>
+</ul>
+</li>
+<li>Review table storage engines
+
+<ul>
+<li>Recommended: innodb</li>
+</ul>
+</li>
+</ul><blockquote>
+<h4>
+<a name="additional-resources-1" class="anchor" href="#additional-resources-1"><span class="octicon octicon-link"></span></a>Additional resources</h4>
+
+<p>High performance MySQL <a href="http://www.highperfmysql.com/">http://www.highperfmysql.com/</a></p>
+</blockquote>
+
+<h2>
+<a name="memcached-optional" class="anchor" href="#memcached-optional"><span class="octicon octicon-link"></span></a>Memcached (optional)</h2>
+
+<p>Memcached is a great cache option that is especially useful for sites with a high number of authenticated users.</p>
+
+<ul>
+<li>Review memcached configuration
+
+<ul>
+<li>Check cache sizes, default table type, etc.</li>
+</ul>
+</li>
+<li>Install memcached PHP extension
+
+<ul>
+<li>SITE LINK</li>
+</ul>
+</li>
+<li>Install Memcache API and Integration module
+
+<ul>
+<li>DESCRIPTION</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+</ul><h2>
+<a name="php" class="anchor" href="#php"><span class="octicon octicon-link"></span></a>PHP</h2>
+
+<p>A few changes to your PHP config can provide major performance enhancements.</p>
+
+<ul>
+<li>Review PHP configuration
+
+<ul>
+<li>Review PHP configuration: max execution, file uploads, etc.</li>
+</ul>
+</li>
+<li>Review loaded PHP extensions
+
+<ul>
+<li>PHP INFO LINK</li>
+</ul>
+</li>
+<li>[Optional] Install PHP opcode cache
+
+<ul>
+<li>Options; APC, eAccelerator, Xcache or OPcache (built into PHP 5.5)</li>
+</ul>
+</li>
+<li>[Optional] Configure PHP opcode cache
+
+<ul>
+<li>Options; APC, eAccelerator, Xcache or OPcache (built into PHP 5.5) </li>
+</ul>
+</li>
+</ul><h2>
+<a name="reverse-proxy-optional" class="anchor" href="#reverse-proxy-optional"><span class="octicon octicon-link"></span></a>Reverse proxy (optional)</h2>
+
+<p>Reverse proxies cache your site's static content and can be configured to serve entire pages to anonymous user.</p>
+
+<ul>
+<li>Install a reverse proxy cache
+
+<ul>
+<li>Recommended: Varnish or Nginx</li>
+</ul>
+</li>
+<li>Configure reverse proxy cache
+
+<ul>
+<li>Recommended: Varnish or Nginx </li>
+</ul>
+</li>
+<li>Configure settings.php with reverse proxy IPs
+
+<ul>
+<li>HANDBOOK PAGE LINK</li>
+</ul>
+</li>
+<li>Make sure cache control modules are configured and connected
+
+<ul>
+<li>DESCRIPTION</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+</ul><h2>
+<a name="cdn-optional" class="anchor" href="#cdn-optional"><span class="octicon octicon-link"></span></a>CDN (optional)</h2>
+
+<p>A CDN can decrease resource usage and give your site a major performance boost.</p>
+
+<ul>
+<li>Setup Content Delivery Network (CDN)
+
+<ul>
+<li>DESCRIPTION </li>
+</ul>
+</li>
+<li>Configure CDN
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+</ul><blockquote>
+<h4>
+<a name="additional-resources-2" class="anchor" href="#additional-resources-2"><span class="octicon octicon-link"></span></a>Additional resources</h4>
+
+<p>Cloudflare <a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></p>
+</blockquote>
+
+<h2>
+<a name="drupal-optimizations" class="anchor" href="#drupal-optimizations"><span class="octicon octicon-link"></span></a>Drupal optimizations</h2>
+
+<p>Drupal has a few settings that enable caching.</p>
+
+<ul>
+<li>Review performance settings
+
+<ul>
+<li>PERFORMANCE PAGE LINK</li>
+</ul>
+</li>
+<li>Review Views cache settings</li>
+<li>Install Elysia cron
+
+<ul>
+<li>DESCRIPTION</li>
+<li>PROJECT LINK</li>
+</ul>
+</li>
+<li>Configure Elysia cron
+
+<ul>
+<li>DESCRIPTION<br>
+</li>
+</ul>
+</li>
+</ul><h2>
+<a name="user-management" class="anchor" href="#user-management"><span class="octicon octicon-link"></span></a>User management</h2>
+
+<p>Users are your biggest threat. Let's review a few settings.</p>
+
+<ul>
+<li>Set administrator role
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Review user registration settings
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Review email settings
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Install filter permissions module
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Read managing…
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Review and revise user permissions
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+</ul><h2>
+<a name="logs" class="anchor" href="#logs"><span class="octicon octicon-link"></span></a>Logs</h2>
+
+<p>Logs can be the first indicator for issues that will get much worse when you launch.</p>
+
+<ul>
+<li>Check Drupal logs for issues
+
+<ul>
+<li>Anything noticable? Review your logs for anything that stands out.</li>
+<li>RECENT LOG ENTRY LINK</li>
+</ul>
+</li>
+<li>Check for core and module updates (update manager)
+
+<ul>
+<li>Make sure that Update Manager is enabled, run cron or sun the check manually, and then apply any necessary updates.</li>
+<li>UPDATE PAGE LINK</li>
+</ul>
+</li>
+</ul><h2>
+<a name="cleanup" class="anchor" href="#cleanup"><span class="octicon octicon-link"></span></a>Cleanup</h2>
+
+<p>The following tasks that cleanup our tools, settings, logs, etc. that are performance killers and/or security risks.</p>
+
+<ul>
+<li>Disable devel modules
+
+<ul>
+<li>Disabled for security and performance</li>
+</ul>
+</li>
+<li>Disable Update Manager
+
+<ul>
+<li>Disabled for performance</li>
+</ul>
+</li>
+<li>Disable Database Logging
+
+<ul>
+<li>Disabled for performance</li>
+</ul>
+</li>
+<li>Set maintenance theme
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Clean CSS files with CSS tidy
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Disable PHP error message display
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Change Drupal, MySQL, and SSH passowrds
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Set up site emailing
+
+<ul>
+<li>Recommendaed: Mandrill module</li>
+</ul>
+</li>
+</ul><h2>
+<a name="front-end-review" class="anchor" href="#front-end-review"><span class="octicon octicon-link"></span></a>Front-end review</h2>
+
+<p>These tasks ensure that the end-user has a pleasurable experience on-site.</p>
+
+<ul>
+<li>Review site appearance as anonymous user
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Review site appearance as authenticated user
+
+<ul>
+<li>DESCRIPTION </li>
+</ul>
+</li>
+<li>Run pingdom tools check
+
+<ul>
+<li>DESCRIPTION<br>
+Site launch</li>
+</ul>
+</li>
+<li>Set up HTTP redirect in settings.php for www or non-www
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+<li>Point DNS and/or CDN to new live server
+
+<ul>
+<li>DESCRIPTION </li>
+</ul>
+</li>
+<li>Set up cron job
+
+<ul>
+<li>DESCRIPTION</li>
+</ul>
+</li>
+</ul><h2>
+<a name="paid-services-optional" class="anchor" href="#paid-services-optional"><span class="octicon octicon-link"></span></a>Paid services (optional)</h2>
+
+<p>Looking for something cool and have some money to spend?</p>
+
+<ul>
+<li>Throw out a lot of this list <a href="https://www.getpantheon.com/">get Pantheon</a>
+</li>
+<li>I need help launching my site
+
+<ul>
+<li>Get in touch with <a href="http://webozy.com/">WebOzy</a>
+</li>
+</ul>
+</li>
+</ul><h2>
+<a name="extras" class="anchor" href="#extras"><span class="octicon octicon-link"></span></a>Extras</h2>
+
+<p>Now that you've successfully launched your site, do something nice for yourself.</p>
+
+<ul>
+<li>Brew some fresh coffee</li>
+<li>Eat some bacon</li>
+<li>Do something nice for us
+
+<ul>
+<li>Link to WebOzy to thank them for this awesome module</li>
+</ul>
+</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/WebOzy/Drupal-QA-Checklist/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/WebOzy/Drupal-QA-Checklist/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/WebOzy/Drupal-QA-Checklist"></a> is maintained by <a href="https://github.com/WebOzy">WebOzy</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
