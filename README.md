@@ -6,7 +6,7 @@
 The following will help in your use of the QA Checklist.
 Information
 
-This module was written for Drupal site builders, developers, and System administrators or anyone else in charge of launching a Drupal site. The tasks within represent a comprehensive list of things to review and tasks to perform before going live. If you need help with Drupal SEO best practices, the search engines' latest changes, your brand's target audience, or strategic marketing objectives, consider using a Drupal development shop consultant like WebOzy or others listed HERE.
+This module was written for Drupal site builders, developers, and System administrators or anyone else in charge of launching a Drupal site. The tasks within represent a comprehensive list of things to review and tasks to perform before going live. If you need help with Drupal SEO best practices, the search engines' latest changes, your brand's target audience, or strategic marketing objectives, consider using a Drupal development shop consultant like [WebOzy](http://webozy.com/) or others listed in the [Marketplace](https://www.drupal.org/drupal-services).
 
 ### A bit about checklists
 
@@ -14,30 +14,27 @@ Each time you open the QAChecklist, it will look to see if any tasks have alread
 
 The tasks here are designed to be done sequentially, from top to bottom.
 
-### Some notes
-
-- Save Button: Be sure to click the save button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.
-- Help: Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.
-- “Configure” may also mean “Install and configure”. At WebOzy we make frequent use of distros and server images. This means that the software is already installed, but still needs to be configured uniquely for each client.
-- “Review” means to check over, the usual settings may be fine
-    - **define**:*review* - to examine or assess (something) formally with the possibility or intention of instituting change if necessary. 
-
 ### Don’t do it all
 
 Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as Pantheon means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain points.
 
 ### Credits
 
-The Drupal QA Checklist was created by Nicholas Garofalo (Eidolon Night), the CTO of WebOzy, Inc. and other staff members. Development was paid for exclusively by Volacci. Special thanks to Travis Carden who created the Checklist API and ported the 7.x-1.x branch. 
+The Drupal QA Checklist was created by [Nicholas Garofalo (Eidolon Night)](https://www.drupal.org/user/191336), the CTO of WebOzy, Inc. and other staff members. Special thanks to [Travis Carden](https://www.drupal.org/user/236758) who created the [Checklist API](https://www.drupal.org/project/checklistapi) and ported the 7.x-1.x branch.*
+
+>#### Notes
+>
+> - Be sure to click the **save** button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.
+> - Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.
+> - “Review” means to check over, the usual settings may be fine
+>     - **define**:*review* - to examine or assess (something) formally with the possibility or intention of instituting change if necessary. 
 
 ## Deployment
 
 - Deploy code to live server
     - This checklist is meant to be performed on your live environment
-Other checklists
 
-## Other checklists
-
+## Other checklists (optional)
 These are other checklists that would be good to complete.
 
 - Security Review
@@ -54,6 +51,7 @@ These are other checklists that would be good to complete.
     - PROJECT LINK
 
 ## Backups
+A good backup strategy prevents you from having a really bad day.
 
 - Install Backup and Migrate
     - This will help with your database backups if your host/PAAS doesn't do it for you.
@@ -68,6 +66,7 @@ These are other checklists that would be good to complete.
     - Using your hosts server-side backups ensures that you also save server configuration
 
 ## Maintenance
+You want to make sure that your site keeps performing well, these steps help you do just that.
 
 - Install DB Maintenance
     - Keep your database clean and running smoothly. Note: You db server needs to be running a few days to get useful results.
@@ -76,12 +75,14 @@ These are other checklists that would be good to complete.
     - CONFIGURE LINK
 
 ## Linux
+Some changes to how your OS behaves can help with resource usage and ensure that you get the most out of your server.
 
 - Review OS swappiness value
     - Check swappiness value to avoid swapping to the hard disks. Be careful and make sure that you have enough memory.
     - MORE INFO
 
 ## Web server
+No matter which web server technology you use, the default settings simply won't do.
 
 - Review web server configuration
     - Review Apache/Nginx configuration: max clients, timeouts, etc.
@@ -92,6 +93,7 @@ These are other checklists that would be good to complete.
 > Apache performance tuning http://httpd.apache.org/docs/current/misc/perf-tuning.html
 
 ## Database
+The database is Drupal's backend, so let's treat her well.
 
 - Review database configuration
     - Check cache sizes, default table type, etc.
@@ -102,7 +104,8 @@ These are other checklists that would be good to complete.
 > High performance MySQL http://www.highperfmysql.com/
 
 
-## Memcached
+## Memcached (optional)
+Memcached is a great cache option that is especially useful for sites with a high number of authenticated users.
 
 - Review memcached configuration
     - Check cache sizes, default table type, etc.
@@ -113,6 +116,7 @@ These are other checklists that would be good to complete.
     - PROJECT LINK
 
 ## PHP
+A few changes to your PHP config can provide major performance enhancements.
 
 - Review PHP configuration
     - Review PHP configuration: max execution, file uploads, etc.
@@ -123,9 +127,10 @@ These are other checklists that would be good to complete.
 - [Optional] Configure PHP opcode cache
     - Options; APC, eAccelerator, Xcache or OPcache (built into PHP 5.5) 
 
-## Reverse proxy
+## Reverse proxy (optional)
+Reverse proxies cache your site's static content and can be configured to serve entire pages to anonymous user.
 
-- Install or setup reverse proxy cache
+- Install a reverse proxy cache
     - Recommended: Varnish or Nginx
 - Configure reverse proxy cache
     - Recommended: Varnish or Nginx 
@@ -136,13 +141,19 @@ These are other checklists that would be good to complete.
     - PROJECT LINK
 
 ## CDN (optional)
+A CDN can decrease resource usage and give your site a major performance boost.
 
 - Setup Content Delivery Network (CDN)
     - DESCRIPTION 
 - Configure CDN
     - DESCRIPTION
 
->## Drupal optimizations
+> ####Additional resources
+> Cloudflare https://www.cloudflare.com/
+
+## Drupal optimizations
+Drupal has a few settings that enable caching.
+
 - Review performance settings
     - PERFORMANCE PAGE LINK
 - Review Views cache settings
@@ -153,6 +164,7 @@ These are other checklists that would be good to complete.
     - DESCRIPTION   
 
 ## User management
+Users are your biggest threat. Let's review a few settings.
 
 - Set administrator role
     - DESCRIPTION
@@ -166,14 +178,19 @@ These are other checklists that would be good to complete.
     - DESCRIPTION
 - Review and revise user permissions
     - DESCRIPTION
+
 ## Logs
+Logs can be the first indicator for issues that will get much worse when you launch.
 
 - Check Drupal logs for issues
-    - DESCRIPTION
+    - Anything noticable? Review your logs for anything that stands out.
+    - RECENT LOG ENTRY LINK
 - Check for core and module updates (update manager)
     - Make sure that Update Manager is enabled, run cron or sun the check manually, and then apply any necessary updates.
+    - UPDATE PAGE LINK
 
 ## Cleanup
+The following tasks that cleanup our tools, settings, logs, etc. that are performance killers and/or security risks.
 
 - Disable devel modules
     - Disabled for security and performance
@@ -193,10 +210,11 @@ These are other checklists that would be good to complete.
     - Recommendaed: Mandrill module
 
 ## Front-end review
+These tasks ensure that the end-user has a pleasurable experience on-site.
 
 - Review site appearance as anonymous user
     - DESCRIPTION
-- Review site appearance as authenticateduser
+- Review site appearance as authenticated user
     - DESCRIPTION 
 - Run pingdom tools check
     - DESCRIPTION  
@@ -209,7 +227,9 @@ Site launch
     - DESCRIPTION
 
 ## Paid services (optional)
+Looking for something cool and have some money to spend?
 
+- Throw out a lot of this list [get Pantheon](https://www.getpantheon.com/)
 - I need help launching my site
     - Get in touch with [WebOzy](http://webozy.com/)
 
