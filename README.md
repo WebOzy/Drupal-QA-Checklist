@@ -17,15 +17,10 @@ The tasks here are designed to be done sequentially, from top to bottom.
 ### Some notes
 
 - Save Button: Be sure to click the save button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.
-
 - Help: Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.
-
 - “Configure” may also mean “Install and configure”. At WebOzy we make frequent use of distros and server images. This means that the software is already installed, but still needs to be configured uniquely for each client.
-
-
 - “Review” means to check over, the usual settings may be fine
     - **define**:*review* - to examine or assess (something) formally with the possibility or intention of instituting change if necessary. 
-
 
 ### Don’t do it all
 
@@ -47,100 +42,84 @@ These are other checklists that would be good to complete.
 
 - Security Review
     - Check the site for common Drupal security risks.
-
+    - PROJECT LINK
 - SEO Checklist
     - Add some modules to help with SEO best practices.
-
+    - PROJECT LINK
 - Site Audit
     - Drupal static site analysis platform that generates reports with actionable best practice recommendations.
-
+    - PROJECT LINK
 - Performance and scalability checklist
     - Drupal static site analysis platform that generates reports with actionable best practice recommendations.
+    - PROJECT LINK
 
 ## Backups
 
 - Install Backup and Migrate
     - This will help with your database backups if your host/PAAS doesn't do it for you.
     - PROJECT LINK
-
 - Install Backup and Migrate Files
     - This addon helps backs up for files if your host/PAAS doesn't do it for you.
     - PROJECT LINK
-
 - Configure Backup and Migrate settings
     - DESCRIPTION
     - PROJECT LINK
-
 - Configure server-side backups
     - Using your hosts server-side backups ensures that you also save server configuration
 
 ## Maintenance
 
 - Install DB Maintenance
-    - DESCRIPTION
+    - Keep your database clean and running smoothly. Note: You db server needs to be running a few days to get useful results.
     - PROJECT LINK
-
 - Run DB Maintenance
-    - Module info... 
+    - CONFIGURE LINK
 
 ## Linux
 
 - Review OS swappiness value
-    - Check swappiness value to avoid the hard disks
-Web server
+    - Check swappiness value to avoid swapping to the hard disks. Be careful and make sure that you have enough memory.
+    - MORE INFO
+
+## Web server
 
 - Review web server configuration
-               Review Apache/Nginx configuration: max clients, timeouts, etc.
+    - Review Apache/Nginx configuration: max clients, timeouts, etc.
 - Review configured vhosts 
     - Check for the proper vhosts for your site and any overrides that may be in those files.
 
-
-   * Additional resources
-   * 
-      * Apache performance tuning http://httpd.apache.org/docs/current/misc/perf-tuning.html
+> #### Additional resources
+> Apache performance tuning http://httpd.apache.org/docs/current/misc/perf-tuning.html
 
 ## Database
 
 - Review database configuration
     - Check cache sizes, default table type, etc.
-
 - Review table storage engines
     - Recommended: innodb
 
-
-   * Additional resources
-   * 
-      * High performance MySQL http://www.highperfmysql.com/
+> ####Additional resources
+> High performance MySQL http://www.highperfmysql.com/
 
 
 ## Memcached
 
 - Review memcached configuration
     - Check cache sizes, default table type, etc.
-
 - Install memcached PHP extension
-    - Recommended: innodb
-
+    - SITE LINK
 - Install Memcache API and Integration module
     - DESCRIPTION
     - PROJECT LINK
-
-
-   * Additional resources
-   * 
-      * High performance MySQL http://www.highperfmysql.com/
 
 ## PHP
 
 - Review PHP configuration
     - Review PHP configuration: max execution, file uploads, etc.
-
 - Review loaded PHP extensions
-    - Status page link...
-
+    - PHP INFO LINK
 - [Optional] Install PHP opcode cache
     - Options; APC, eAccelerator, Xcache or OPcache (built into PHP 5.5)
-
 - [Optional] Configure PHP opcode cache
     - Options; APC, eAccelerator, Xcache or OPcache (built into PHP 5.5) 
 
@@ -148,35 +127,28 @@ Web server
 
 - Install or setup reverse proxy cache
     - Recommended: Varnish or Nginx
-
 - Configure reverse proxy cache
     - Recommended: Varnish or Nginx 
-
 - Configure settings.php with reverse proxy IPs
-    - Needs handbook page...
-
+    - HANDBOOK PAGE LINK
 - Make sure cache control modules are configured and connected
     - DESCRIPTION
     - PROJECT LINK
 
-- CDN (optional)
+## CDN (optional)
 
 - Setup Content Delivery Network (CDN)
     - DESCRIPTION 
-
 - Configure CDN
     - DESCRIPTION
 
-## Drupal optimizations
-
+>## Drupal optimizations
 - Review performance settings
-
+    - PERFORMANCE PAGE LINK
 - Review Views cache settings
-
 - Install Elysia cron
     - DESCRIPTION
     - PROJECT LINK
-
 - Configure Elysia cron
     - DESCRIPTION   
 
@@ -184,51 +156,39 @@ Web server
 
 - Set administrator role
     - DESCRIPTION
-
 - Review user registration settings
     - DESCRIPTION
-
 - Review email settings
     - DESCRIPTION
-
 - Install filter permissions module
     - DESCRIPTION
-
 - Read managing…
     - DESCRIPTION
-
 - Review and revise user permissions
     - DESCRIPTION
 ## Logs
 
 - Check Drupal logs for issues
     - DESCRIPTION
-
 - Check for core and module updates (update manager)
     - Make sure that Update Manager is enabled, run cron or sun the check manually, and then apply any necessary updates.
-Cleanup
+
+## Cleanup
 
 - Disable devel modules
     - Disabled for security and performance
-
 - Disable Update Manager
     - Disabled for performance
-
 - Disable Database Logging
     - Disabled for performance
-
 - Set maintenance theme
     - DESCRIPTION
-
 - Clean CSS files with CSS tidy
     - DESCRIPTION
-
 - Disable PHP error message display
     - DESCRIPTION
-
 - Change Drupal, MySQL, and SSH passowrds
     - DESCRIPTION
-
 - Set up site emailing
     - Recommendaed: Mandrill module
 
@@ -236,19 +196,15 @@ Cleanup
 
 - Review site appearance as anonymous user
     - DESCRIPTION
-
 - Review site appearance as authenticateduser
     - DESCRIPTION 
-
 - Run pingdom tools check
     - DESCRIPTION  
 Site launch
 - Set up HTTP redirect in settings.php for www or non-www
     - DESCRIPTION
-
 - Point DNS and/or CDN to new live server
     - DESCRIPTION 
-
 - Set up cron job
     - DESCRIPTION
 
@@ -261,8 +217,6 @@ Site launch
 Now that you've successfully launched your site, do something nice for yourself.
 
 - Brew some fresh coffee
-
 - Eat some bacon
-
 - Do something nice for us
     - Link to WebOzy to thank them for this awesome module
