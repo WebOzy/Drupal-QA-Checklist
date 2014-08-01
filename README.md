@@ -11,35 +11,38 @@ This module was written for Drupal site builders, developers, and System adminis
 ### A bit about checklists
 
 Each time you open the QAChecklist, it will look to see if any tasks have already been completed. For example, if you've already turned on clean URLs then that item will be checked. You still need to click "Save" to time and date stamp the automatically-checked items.
+
 The tasks here are designed to be done sequentially, from top to bottom.
-How it's organized
 
-   * Save Button: Be sure to click the save button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.
-   * Help: Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.
+### Some notes
 
-“Configure” may also mean “Install and configure”. At WebOzy we make frequent use of distros and server images. This means that the software is already installed, but still needs to be configured uniquely for each client.
+- Save Button: Be sure to click the save button after you check off each item. This will create a time and date stamp so that you can easily see when each task was completed.
+
+- Help: Some items have "More info" links. These will take you to appropriate documentation pages where you can read more about a module or important concept.
+
+- “Configure” may also mean “Install and configure”. At WebOzy we make frequent use of distros and server images. This means that the software is already installed, but still needs to be configured uniquely for each client.
 
 
-“review” means to check over, the usual settings may be fine
-
-
-examine or assess (something) formally with the possibility or intention of instituting change if necessary. 
+- “Review” means to check over, the usual settings may be fine
+    - **define**:*review* - to examine or assess (something) formally with the possibility or intention of instituting change if necessary. 
 
 
 ### Don’t do it all
 
 Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as Pantheon means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain points.
-Credits
+
+### Credits
+
 The Drupal QA Checklist was created by Nicholas Garofalo (Eidolon Night), the CTO of WebOzy, Inc. and other staff members. Development was paid for exclusively by Volacci. Special thanks to Travis Carden who created the Checklist API and ported the 7.x-1.x branch. 
-
-
-
 
 ## Deployment
 
 - Deploy code to live server
     - This checklist is meant to be performed on your live environment
 Other checklists
+
+## Other checklists
+
 These are other checklists that would be good to complete.
 
 - Security Review
@@ -57,20 +60,25 @@ These are other checklists that would be good to complete.
 ## Backups
 
 - Install Backup and Migrate
-    - Module info...
+    - This will help with your database backups if your host/PAAS doesn't do it for you.
+    - PROJECT LINK
 
 - Install Backup and Migrate Files
-    - Module info…
+    - This addon helps backs up for files if your host/PAAS doesn't do it for you.
+    - PROJECT LINK
 
 - Configure Backup and Migrate settings
-    - Module info... 
+    - DESCRIPTION
+    - PROJECT LINK
 
 - Configure server-side backups
     - Using your hosts server-side backups ensures that you also save server configuration
-Maintenance
+
+## Maintenance
 
 - Install DB Maintenance
-    - Module info…
+    - DESCRIPTION
+    - PROJECT LINK
 
 - Run DB Maintenance
     - Module info... 
@@ -114,7 +122,8 @@ Web server
     - Recommended: innodb
 
 - Install Memcache API and Integration module
-    - Recommended: innodb 
+    - DESCRIPTION
+    - PROJECT LINK
 
 
    * Additional resources
@@ -147,8 +156,10 @@ Web server
     - Needs handbook page...
 
 - Make sure cache control modules are configured and connected
-    - Needs modules...
-CDN (optional)
+    - DESCRIPTION
+    - PROJECT LINK
+
+- CDN (optional)
 
 - Setup Content Delivery Network (CDN)
     - DESCRIPTION 
@@ -163,7 +174,8 @@ CDN (optional)
 - Review Views cache settings
 
 - Install Elysia cron
-    - DESCRIPTION 
+    - DESCRIPTION
+    - PROJECT LINK
 
 - Configure Elysia cron
     - DESCRIPTION   
@@ -224,6 +236,7 @@ Cleanup
 
 - Review site appearance as anonymous user
     - DESCRIPTION
+
 - Review site appearance as authenticateduser
     - DESCRIPTION 
 
@@ -234,7 +247,6 @@ Site launch
     - DESCRIPTION
 
 - Point DNS and/or CDN to new live server
-
     - DESCRIPTION 
 
 - Set up cron job
@@ -242,13 +254,15 @@ Site launch
 
 ## Paid services (optional)
 
-- Hire WebOzy
-    - DESCRIPTION
+- I need help launching my site
+    - Get in touch with [WebOzy](http://webozy.com/)
 
 ## Extras
+Now that you've successfully launched your site, do something nice for yourself.
+
+- Brew some fresh coffee
 
 - Eat some bacon
-    - DESCRIPTION
 
-- Link to WebOzy to thank them for this awesome module
-    - DESCRIPTION
+- Do something nice for us
+    - Link to WebOzy to thank them for this awesome module
