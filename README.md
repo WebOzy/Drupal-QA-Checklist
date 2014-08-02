@@ -7,17 +7,17 @@
 The following will help in your use of the QA Checklist.
 Information
 
-This module was written for Drupal site builders, developers, and System administrators or anyone else in charge of launching a Drupal site. The tasks within represent a comprehensive list of things to review and tasks to perform before going live. If you need help with Drupal SEO best practices, the search engines' latest changes, your brand's target audience, or strategic marketing objectives, consider using a Drupal development shop consultant like [WebOzy](http://webozy.com/) or others listed in the [Marketplace](https://www.drupal.org/drupal-services).
+This module was written for Drupal site builders, developers, and System administrators or anyone else in charge of launching a Drupal site. The tasks within represent a comprehensive list of things to review and tasks to perform before going live. If you need help, or this list doesn't make any sense to you, we suggest hiring a Drupal development shop like [WebOzy](http://webozy.com/) or others listed in the [Marketplace](https://www.drupal.org/drupal-services).
 
 ### A bit about checklists
 
-Each time you open the QAChecklist, it will look to see if any tasks have already been completed. For example, if you've already turned on clean URLs then that item will be checked. You still need to click "Save" to time and date stamp the automatically-checked items.
+Each time you open the QAChecklist, it will look to see if any tasks have already been completed. You still need to click "Save" to time and date stamp the automatically-checked items.
 
 The tasks here are designed to be done sequentially, from top to bottom.
 
 ### Don’t do it all
 
-Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as Pantheon means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain points.
+Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as Pantheon means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain features.
 
 ### Credits
 
@@ -31,16 +31,17 @@ The Drupal QA Checklist was created by [Nicholas Garofalo (Eidolon Night)](https
 >     - **define**:*review* - to examine or assess (something) formally with the possibility or intention of instituting change if necessary. 
 
 ## Deployment
+Your first task! Gook luck!
 
 - Deploy code to live server
-    - This checklist is meant to be performed on your live environment
+    - This checklist is meant to be performed on your live environment.
 
 ## Other checklists (optional)
 These are other checklists that would be good to complete.
 
 - Security Review
     - Check the site for common Drupal security risks.
-    - PROJECT LINK
+    - https://www.drupal.org/project/security_review
 - SEO Checklist
     - Add some modules to help with SEO best practices.
     - PROJECT LINK
@@ -48,7 +49,7 @@ These are other checklists that would be good to complete.
     - Drupal static site analysis platform that generates reports with actionable best practice recommendations.
     - PROJECT LINK
 - Performance and scalability checklist
-    - Drupal static site analysis platform that generates reports with actionable best practice recommendations.
+    - A checklist of some performance and scalability best practices.
     - PROJECT LINK
 
 ## Backups
@@ -61,10 +62,10 @@ A good backup strategy prevents you from having a really bad day.
     - This addon helps backs up for files if your host/PAAS doesn't do it for you.
     - PROJECT LINK
 - Configure Backup and Migrate settings
-    - DESCRIPTION
+    - Schedule these as frequently as you need, but remember that for large sites a scheduled backup can bring everything down.
     - PROJECT LINK
 - Configure server-side backups
-    - Using your hosts server-side backups ensures that you also save server configuration
+    - Using your hosts server-side backups ensures that you also save server configuration.
 
 ## Maintenance
 You want to make sure that your site keeps performing well, these steps help you do just that.
@@ -80,7 +81,7 @@ Some changes to how your OS behaves can help with resource usage and ensure that
 
 - Review OS swappiness value
     - Check swappiness value to avoid swapping to the hard disks. Be careful and make sure that you have enough memory.
-    - MORE INFO
+    - MORE INFO (NEEDS DOCUMENTATION)
 
 ## Web server
 No matter which web server technology you use, the default settings simply won't do.
@@ -91,7 +92,10 @@ No matter which web server technology you use, the default settings simply won't
     - Check for the proper vhosts for your site and any overrides that may be in those files.
 
 > #### Additional resources
-> Apache performance tuning http://httpd.apache.org/docs/current/misc/perf-tuning.html
+> Apache performance tuning: http://httpd.apache.org/docs/current/misc/perf-tuning.html
+> Nginx performance tuning: http://www.slashroot.in/nginx-web-server-performance-tuning-how-to-do-it
+> > OTHER HELPFUL STUFF
+
 
 ## Database
 The database is Drupal's backend, so let's treat her well.
@@ -100,8 +104,9 @@ The database is Drupal's backend, so let's treat her well.
     - Check cache sizes, default table type, etc.
 - Review table storage engines
     - Recommended: innodb
+    - Info: DRUPAL DOCUMENTATION
 
-> ####Additional resources
+> #### Additional resources
 > High performance MySQL http://www.highperfmysql.com/
 
 
@@ -113,14 +118,16 @@ Memcached is a great cache option that is especially useful for sites with a hig
 - Install memcached PHP extension
     - SITE LINK
 - Install Memcache API and Integration module
-    - DESCRIPTION
-    - PROJECT LINK
+    - Integration between Drupal and Memcached
+    - https://www.drupal.org/project/memcache
+    - DOCUMENTATION LINK
 
 ## PHP
 A few changes to your PHP config can provide major performance enhancements.
 
 - Review PHP configuration
     - Review PHP configuration: max execution, file uploads, etc.
+    - PHP INFO LINK
 - Review loaded PHP extensions
     - PHP INFO LINK
 - [Optional] Install PHP opcode cache
@@ -133,13 +140,20 @@ Reverse proxies cache your site's static content and can be configured to serve 
 
 - Install a reverse proxy cache
     - Recommended: Varnish or Nginx
+    - LINK FOR VARNISH
+    - LINK FOR NGINX
 - Configure reverse proxy cache
-    - Recommended: Varnish or Nginx 
+    - Recommended: Varnish or Nginx
+    - LINK FOR VARNISH
+    - LINK FOR NGINX
 - Configure settings.php with reverse proxy IPs
     - HANDBOOK PAGE LINK
 - Make sure cache control modules are configured and connected
     - DESCRIPTION
-    - PROJECT LINK
+    - https://www.drupal.org/project/varnish
+    - https://www.drupal.org/project/expire
+- Check the status
+    - https://www.drupal.org/project/reverse_proxy_check
 
 ## CDN (optional)
 A CDN can decrease resource usage and give your site a major performance boost.
@@ -148,9 +162,12 @@ A CDN can decrease resource usage and give your site a major performance boost.
     - DESCRIPTION 
 - Configure CDN
     - DESCRIPTION
+- Install control module
+    - https://www.drupal.org/project/cdn
 
 > ####Additional resources
 > Cloudflare https://www.cloudflare.com/
+> https://www.drupal.org/project/cloudflare
 
 ## Drupal optimizations
 Drupal has a few settings that enable caching.
@@ -159,21 +176,25 @@ Drupal has a few settings that enable caching.
     - PERFORMANCE PAGE LINK
 - Review Views cache settings
 - Install Elysia cron
-    - DESCRIPTION
-    - PROJECT LINK
+    - Elysia Cron allows more advanced scheduling of your cron tasks.
+    - https://www.drupal.org/project/elysia_cron
 - Configure Elysia cron
-    - DESCRIPTION   
+    - Review your cron jobs and create some sane schedules.   
 
 ## User management
 Users are your biggest threat. Let's review a few settings.
 
 - Set administrator role
-    - DESCRIPTION
+    - Since you'll probably be sharing admin access, you'll want a proper admin role.
+    - USERS AND PERMISSIONS LINK
 - Review user registration settings
-    - DESCRIPTION
+    - Check the 
+    - USER SETTINGS LINK
 - Review email settings
-    - DESCRIPTION
+    - Review the text and instructions of the welcome and verification emails.
+    - USER SETTINGS LINK
 - Install filter permissions module
+    - 
     - DESCRIPTION
 - Read managing…
     - DESCRIPTION
@@ -218,7 +239,7 @@ These tasks ensure that the end-user has a pleasurable experience on-site.
 - Review site appearance as authenticated user
     - DESCRIPTION 
 - Run pingdom tools check
-    - DESCRIPTION  
+    - http://tools.pingdom.com/  
 Site launch
 - Set up HTTP redirect in settings.php for www or non-www
     - DESCRIPTION
